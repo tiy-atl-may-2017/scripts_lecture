@@ -1,0 +1,29 @@
+{
+  "name": "lecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "pretest": "echo runnning tests",
+    "posttest": "echo I hope they worked",
+    "test": "mocha test",
+    "preinstall": "echo Install Packages",
+    "postinstall": "Nodemon",
+    "newview": "touch index.html & touch index.js",
+    "start": "mocha test && nodemon",
+    "build:js": "browserify main.js -o bundle.js",
+    "build:css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "build": "npm run build:js & npm run build:css",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "watch:js": "watchify main.js -o bundle.js",
+    "watch": "npm run watch:css & npm run watch:js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "14.4.0",
+    "express": "4.15.3",
+    "nodemon": "1.11.0",
+    "watchify": "3.9.0"
+  }
+}

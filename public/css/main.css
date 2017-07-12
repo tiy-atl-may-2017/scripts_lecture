@@ -1,0 +1,8 @@
+body nav {
+  background-color: red; }
+
+body ul {
+  display: flex; }
+
+body li {
+  color: blue; }
